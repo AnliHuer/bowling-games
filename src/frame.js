@@ -1,11 +1,13 @@
-function Frame(scoreString){
+function Frames(scoreString){
   this.scoreString = scoreString;
+  this.extraNum = 0;
 }
 
-Frame.prototype.getScoreArray = function(){
-  var scoreArray = this.scoreString.split('').filter(function(val){
+Frames.prototype.getScoreStringArray = function(){
+  this.extraNum = this.scoreString.split('||')[1].length;
+  var scoreStringArray = this.scoreString.split('').filter(function(val){
     return val !== '|';
   });
-  return scoreArray;
+  return scoreStringArray;
 };
-module.exports = Frame;
+module.exports = Frames;

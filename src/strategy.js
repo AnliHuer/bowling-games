@@ -6,15 +6,20 @@ function Strategy() {
     aString: '/',
     score: 10
   }, {
-    aString: '.',
+    aString: '-',
     score: 0
   }];
 }
 
 Strategy.prototype.getStringScore = function(aString) {
-  return this.strategyItem.filter(function(val) {
+  var item = this.strategyItem.filter(function(val) {
     return val.aString === aString;
-  })[0].score;
+  });
+  if(item.length){
+    return item[0].score;
+  }else{
+    return parseInt(aString);
+  }
 };
 
 module.exports = Strategy;
