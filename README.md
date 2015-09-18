@@ -1,3 +1,11 @@
+一共设计了三个类：Strategy（策略类），Frame（局类）， CalculateScore（计分类）．
+＃Strategy：strategyItem，不同字符串对应不同分数；getStringScore()，通过传入字符判断该字符对应的分数．
+＃Frame：scoreString，比赛成绩的字符串；extraNum，额外机会的次数；getScoreStringArray()，将比赛成绩的字符串转换成数组，去除＇｜＇．
+＃CalculateScore：getFinalScoreArray()，得到每局每个球最终成绩的数字数组；calculateFinalScore()，计算最终成绩；getFinalScore()，获得最终成绩返回．
+
+
+
+
 写一个程序给保龄球比赛计分
 
 输入： 描述保龄球比赛成绩的字符串 (描述见下面)
@@ -10,7 +18,7 @@
 在每一局里， 玩家有两次机会试图击倒全部10个瓶。
 
 如果第一次就击倒了全部10个瓶，这称之为“strike”。这一局就结束了。
-这一局的分数等于10加上接下来两球击倒的瓶数的总和。 
+这一局的分数等于10加上接下来两球击倒的瓶数的总和。
 
 如果一局中的第二个球击倒了全部10个瓶，称之为“spare”。这一局就结束了。
 这一局的分数等于10加上接下来一个球击倒的瓶数。
@@ -50,5 +58,3 @@ X|X|X|X|X|X|X|X|X|X||XX
 
 X|7/|9-|X|-8|8/|-6|X|X|X||81
 Total score == 167
-
-
